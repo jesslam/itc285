@@ -1,0 +1,19 @@
+{
+  "name": "pokemongopher",
+  "version": "1.0.0",
+  "description": "ITC285 capstone project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesslam/itc285.git"
+  },
+  "author": "Jessica Lam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesslam/itc285/issues"
+  },
+  "homepage": "https://github.com/jesslam/itc285#readme"
+}
