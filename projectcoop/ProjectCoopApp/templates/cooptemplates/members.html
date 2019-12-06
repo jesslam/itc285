@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Livingston Members</h2>
+<table class = 'table'>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Unit Number</th>
+        <th>Owner?</th>
+    </tr>
+    {% for c in coop_members}
+    <tr>
+        <td>{{ c.FirstName }}</td>
+        <td>{{ c.LastName }}</td>
+        <td>{{ c.UnitNum }}</td>
+        <td>{{ c.Owner }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

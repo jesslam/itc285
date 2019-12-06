@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'projectcoop',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +77,11 @@ WSGI_APPLICATION = 'ProjectCoop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'projectcoopdb',
+        'USER': 'postgres',
+        'PASSWORD': 'P@ssw0rd1',
+        'HOST': '127.0.0.1',
+        'PORT': 5432,
     }
 }
 
