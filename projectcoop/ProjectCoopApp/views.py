@@ -8,4 +8,8 @@ def index(request):
 
 def getmembers(request):
     coop_members = Member.objects.all()
-    return render('ProjectCoop/members.html', {'coop_members': coop_members})
+    return render(request, 'ProjectCoop/members.html', {'coop_members': coop_members})
+
+def getTreasurerReport(request):
+    treasurer_rpt = TreasurerReport.objects.all()
+    return render(request, 'ProjectCoop/treasurerreport.html', {'treasurer_rpt': treasurer_rpt}) 
