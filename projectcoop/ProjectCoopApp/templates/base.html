@@ -7,16 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <header>
+        <!-- OneTel Template http://www.templatemo.com/tm-468-onetel-->
+        <!-- stylesheet css -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/nivo-lightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'css/default.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
         <!--google web font css-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700" >
+
         <a title="Livingston Co-op"></a>
         <link rel="stylesheet" href="{% static 'css/home.css' %}">   
-
-
-        <!-- OneTel Template http://www.templatemo.com/tm-468-onetel-->
+        
         <!--bootstrap-->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
 
     </header>
 
@@ -24,7 +30,7 @@
 </head>
 <body> 
     <!--navigation bar-->
-        <!-- <div class="container"> -->
+        <div class="container">
             <div class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="navbar-header">
                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,18 +40,18 @@
                     </button>
                     <a href="#" class="navbar-brand"><p>Livingston</p></a>
                 </div>
-                {% for c in coop_members %}
+                <!-- {% for c in coop_members %} -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{% static 'projectcoopapp/index.html' %}" class="active">HOME</a></li>
-                        <li><a href="{% static 'projectcoopapp/members.html' %}">Members</a></li>
-                        <li><a href="{% static 'projectcoopapp/treasurerreport.html' %}">Treasurer Reports</a></li>
+                        <li><a href="{% static 'templates/index.html' %}" class="active">HOME</a></li>
+                        <li><a href="{% static 'templates/members.html' %}">Members</a></li>
+                        <li><a href="{% static 'templates/treasurerreport.html' %}">Treasurer Reports</a></li>
                         <li><a href="#">Users</a></li>
                     </ul>
                 </div>
-                {% endfor %}
+                <!-- {% endfor %} -->
             </div>
-        <!-- </div> -->
+        </div>
     <!--home-->
     <div id="home">
         <div class="container">
@@ -87,10 +93,10 @@
 
 
 
-        <style>
-        </style>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- javascript js -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/nivo-lightbox.min.js' %}"></script>
     </body>
 </html>
