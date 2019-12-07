@@ -1,4 +1,4 @@
 from django.apps import AppConfig
 
-class ProjectCoopConfig(AppConfig):
-    name = 'ProjectCoop'
+class ProjectCoopAppConfig(AppConfig):
+    name = 'ProjectCoopApp'

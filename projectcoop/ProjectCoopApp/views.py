@@ -4,12 +4,12 @@ from .models import Member, Unit, TreasurerReport
 # Create your views here.
 
 def index(request):
-    return render(request, 'ProjectCoop/index.html')
+    return render(request, 'ProjectCoopApp/index.html')
 
 def getmembers(request):
     coop_members = Member.objects.all()
-    return render(request, 'ProjectCoop/members.html', {'coop_members': coop_members})
+    return render(request, 'ProjectCoopApp/members.html', {'coop_members': coop_members})
 
 def getTreasurerReport(request):
     treasurer_rpt = TreasurerReport.objects.all()
-    return render(request, 'ProjectCoop/treasurerreport.html', {'treasurer_rpt': treasurer_rpt}) 
+    return render(request, 'ProjectCoopApp/treasurerreport.html', {'treasurer_rpt': treasurer_rpt}) 
