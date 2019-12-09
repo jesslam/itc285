@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <header>
         <!-- OneTel Template http://www.templatemo.com/tm-468-onetel-->
         <!-- stylesheet css -->
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -17,14 +16,12 @@
         <!--google web font css-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700" >
 
-        <a title="Livingston Co-op"></a>
+        
         <link rel="stylesheet" href="{% static 'css/home.css' %}">   
         
         <!--bootstrap-->
         <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
-
-    </header>
 
 
 </head>
@@ -38,24 +35,28 @@
                         <span class="icon icon-bar"></span>
                         <span class="icon icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand"><p>Livingston</p></a>
+                    <a href="#" class="navbar-brand"><img src="{% static 'images/Coop-5.gif' %}" class="img-responsive" alt="logo"></a>
                 </div>
-                <!-- {% for c in coop_members %} -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{% static 'templates/index.html' %}" class="active">HOME</a></li>
-                        <li><a href="{% static 'templates/members.html' %}">Members</a></li>
-                        <li><a href="{% static 'templates/treasurerreport.html' %}">Treasurer Reports</a></li>
+                        <li><a href="{% url 'index' %}" class="active">HOME</a></li>
+                        <li><a href="{% url 'members' %}">Members</a></li>
+                        <li><a href="{% url 'treasurerreport' %}">Treasurer Reports</a></li>
                         <li><a href="#">Users</a></li>
                     </ul>
                 </div>
-                <!-- {% endfor %} -->
             </div>
         </div>
     <!--home-->
     <div id="home">
         <div class="container">
-            <img src="{% static 'images/denny.jpg' %}">
+                <div class="row">
+                        <div class="col-md-5 col-sm-3"></div>
+                        <div class="col-md-7 col-sm-9">
+                            <h3>Livingston Co-op</h3>
+                            <p> A cooperative community in Capitol Hill</p>
+                        </div>
+                </div>
         </div>
     </div>
 
@@ -65,21 +66,38 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="divider-wrapper divider-one">
-                        <h2>Forms</h2>
+                    <h2>Owners & Current Tenants</h2>
                     </div>
                 </div>
             <div class="col-md-4 col-sm-6">
                 <div class="divider-wrapper divider-two">
-                    <h2>Documents</h2>
+                    <h2>Prospective Owners</h2>
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">
                 <div class="divider-wrapper divider-three">
-                    <h2>Users</h2>
+                    <h2>Community Members</h2>
                 </div>
             </div>
         </div>
- 
+
+    <!-- about section -->
+    <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <img src="{% static 'images/denny.jpg' %}" class="img-responsive" alt="about img">
+                    </div>
+                    <div class="col-md-6 col-sm-12 about-des">
+                        <h2>Startup Business</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+                        <a href="about.html" class="btn btn-default">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
     <!--footer-->
     <footer>
         <div class="input-group">
