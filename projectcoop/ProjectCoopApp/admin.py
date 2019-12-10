@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Member, Unit, TreasurerReport, MeetingMinutes, Meeting
+from .models import Members, Units, TreasurerReports, meetingMinutes, Meetings
 
 # Register your models here.
 
-admin.site.register(Member)
-admin.site.register(Unit)
-admin.site.register(TreasurerReport)
-admin.site.register(MeetingMinutes)
-admin.site.register(Meeting)
+admin.site.register(Members)
+admin.site.register(Units)
+admin.site.register(TreasurerReports)
+admin.site.register(meetingMinutes)
+admin.site.register(Meetings)

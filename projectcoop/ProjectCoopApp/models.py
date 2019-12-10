@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class Member(models.Model):
+class Members(models.Model):
     MemberID = models.IntegerField(),
     FirstName = models.CharField
     LastName = models.CharField
@@ -14,38 +14,38 @@ class Member(models.Model):
         return self.firstname+ ' ' + self.lastname
 
     class Meta:
-        db_table = 'member'
+        db_table = 'members'
         verbose_name_plural = 'members'
 
-class Unit(models.Model):
+class Units(models.Model):
     UnitID = models.IntegerField()
     UnitNum = models.CharField(max_length = 5)
-    MemberID = models.ForeignKey(Member, on_delete = models.DO_NOTHING)
+    MemberID = models.ForeignKey(Members, on_delete = models.DO_NOTHING)
 
     def __str__(self):
         return self.unitnum
 
     class Meta:
-        db_table = 'unit'
+        db_table = 'units'
         verbose_name_plural = 'units'
 
-class TreasurerReport(models.Model):
+class TreasurerReports(models.Model):
     TreasurerRptID = models.IntegerField()
     ReportDate = models.DateField()
     CheckingBal = models.FloatField()
     SavingsBal = models.FloatField()
-    UnitID = models.ForeignKey(Unit, on_delete = models.DO_NOTHING)
+    UnitID = models.ForeignKey(Units, on_delete = models.DO_NOTHING)
     UnitDuesBal = models.FloatField()
     TreasurerNotes = models.TextField(null = True, blank = True)
 
     def __str__(self):
-        return self.treasurerreport
+        return self.treasurerreports
 
     class Meta:
-        db_table = 'treasurerreport'
+        db_table = 'treasurerreports'
         verbose_name_plural = 'treasurerreports'
 
-class Meeting(models.Model):
+class Meetings(models.Model):
     MeetingID = models.IntegerField()
     BoardMtg = 'BD'
     GenMtg = 'GA'
@@ -63,19 +63,19 @@ class Meeting(models.Model):
     )
 
     def __str__(self):
-        return self.meeting
+        return self.meetings
 
     class Meta:
-        db_table = 'meeting'
+        db_table = 'meetings'
         verbose_name_plural = 'meetings'
     
-class MeetingMinutes(models.Model):
+class meetingMinutes(models.Model):
     MeetingMinID = models.IntegerField()
     MeetingDate = models.DateField()
     StartTime = models.TimeField()
     EndTime = models.TimeField()
     MeetingMinutesText = models.TextField(null = True, blank = True)
-    TreasurerReportID = models.ForeignKey(TreasurerReport, on_delete = models.DO_NOTHING)
+    TreasurerReportID = models.ForeignKey(TreasurerReports, on_delete = models.DO_NOTHING)
 
     def __str__(self):
         return self.meetingminutes
@@ -85,15 +85,15 @@ class MeetingMinutes(models.Model):
         verbose_name_plural = 'meetingminutes'
 
 
-class Attendee(models.Model):
-    MemberID = models.ForeignKey(Member, on_delete = models.DO_NOTHING)
-    MeetingID = models.ForeignKey(Meeting, on_delete = models.DO_NOTHING)
+class Attendees(models.Model):
+    MemberID = models.ForeignKey(Members, on_delete = models.DO_NOTHING)
+    MeetingID = models.ForeignKey(Meetings, on_delete = models.DO_NOTHING)
 
     def __str__(self):
         return self.attendees
 
     class Meta:
-        db_table = 'attendee'
+        db_table = 'attendees'
         verbose_name_plural = 'attendees'
 
 
