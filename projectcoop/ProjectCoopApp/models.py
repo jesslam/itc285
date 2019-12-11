@@ -22,7 +22,7 @@ class Units(models.Model):
     MemberID = models.ForeignKey(Members, on_delete = models.DO_NOTHING)
 
     def __str__(self):
-        return self.unitnum
+        return self.UnitNum
 
     class Meta:
         db_table = 'units'
@@ -33,12 +33,12 @@ class TreasurerReports(models.Model):
     ReportDate = models.DateField()
     CheckingBal = models.FloatField()
     SavingsBal = models.FloatField()
-    UnitID = models.ForeignKey(Units, on_delete = models.DO_NOTHING)
-    UnitDuesBal = models.FloatField()
+    UnitNum = models.CharField(blank = True, max_length = 5)
+    UnitDuesBal = models.FloatField(null = True, blank = True)
     TreasurerNotes = models.TextField(null = True, blank = True)
 
     def __str__(self):
-        return self.treasurerreports
+        return self.TreasurerNotes
 
     class Meta:
         db_table = 'treasurerreports'
@@ -77,7 +77,7 @@ class meetingMinutes(models.Model):
     TreasurerReportID = models.ForeignKey(TreasurerReports, on_delete = models.DO_NOTHING)
 
     def __str__(self):
-        return self.meetingminutes
+        return self.MeetingMinutesText
 
     class Meta:
         db_table = 'meetingminutes'

@@ -5,10 +5,10 @@ http://www.templatemo.com/tm-468-onetel
 
 body
   {
-      background: #101010;
-      color: #808080;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 400;
+    background: #101010;
+    color: #808080;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
   }
 
 @media (min-width: 768px) {
@@ -173,9 +173,10 @@ img {
 }
 
 /* table */
-.table {
+.data-table {
   color: #101010;
   background-color: #808080;
+  margin-right: 20px;
 }
 
 /* footer section */

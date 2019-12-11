@@ -9,6 +9,7 @@ urlpatterns = [
     path('treasurerreport/', views.getTreasurerReport, name = 'treasurerreport'),
     path('newmeetingminutes/', views.newMeetingMinutes, name = 'newmeetingminutes'),
     path('coopdef/', views.getCoopDef, name = 'coopdef'),
-    path('loginmessage/', views.loginmessage, name='loginmessage'),
-    path('logoutmessage/', views.logoutmessage, name='logoutmessage'),
+    path('emailsubmit/', views.getEmailSubmit, name = 'emailsubmit'),
+    path('loginmessage/', views.loginMessage, name='loginmessage'),
+    path('logoutmessage/', views.logoutMessage, name='logoutmessage'),
 ]

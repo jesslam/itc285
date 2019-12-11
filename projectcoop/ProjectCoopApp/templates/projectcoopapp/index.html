@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="divider-wrapper divider-one">
-                    <h2>Owners & Current Tenants</h2>
+                    <a href="{% url 'loginmessage' %}"><h2>Owners & Current Tenants</h2></a>
                     </div>
                 </div>
             <div class="col-md-4 col-sm-6">
@@ -115,7 +115,7 @@
                     <h3>Contact Us</h3>
                     <p></p>
                     <div class="input-group">
-                        <form action="#" method="post">
+                        <form action="{% url 'emailsubmit' %}">
                         <input name="email" type="email" placeholder="Enter your email" class="form-control" autorequired>
                         <button type="submit" name="submit" class="btn email">Submit</button>
                         </form>

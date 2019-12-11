@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
-
 {% block content %}
+<div class='container'>
+<h2>Livingston Members</h2>
+<div class='table responsive'>
+<table class = 'table table-bordered' >
+    <tr>
+    <thead class='dark'>
+        <th>Meeting Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Meeting Minutes Info</th>
+    </thead>
+    </tr>
+    {% for c in treasurerreport %}
+    <tr>
+        <td>{{ c.MeetingDate }}</td>
+        <td>{{ c.StartTime }}</td>
+        <td>{{ c.EndTime }}</td>
+        <td>{{ c.MeetingMinutesText }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</div>
 
 {% endblock %}
