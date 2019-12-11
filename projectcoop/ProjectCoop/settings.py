@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ProjectCoopApp.wsgi.application'
+WSGI_APPLICATION = 'ProjectCoop.wsgi.application'
 
 
 # Database

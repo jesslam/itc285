@@ -5,14 +5,13 @@ from django.contrib.auth.models import User
 
 class Members(models.Model):
     MemberID = models.IntegerField(),
-    FirstName = models.CharField
-    LastName = models.CharField
-    UnitNum = models.CharField
+    FirstName = models.CharField(max_length = 255, null = True)
+    LastName = models.CharField(max_length = 255, null = True)
+    UnitNum = models.CharField(max_length = 5, null = True)
     OwnerCheck = models.BooleanField()
 
     def __str__(self):
-        return self.firstname+ ' ' + self.lastname
-
+        return self.FirstName + ' ' + self.LastName
     class Meta:
         db_table = 'members'
         verbose_name_plural = 'members'
