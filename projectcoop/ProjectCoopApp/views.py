@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Members, Units, TreasurerReports, meetingMinutes, Meetings
 from .forms import meetingMinutesForm, TreasurerReportsForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -19,6 +20,7 @@ def getMeetingMinutes(request):
     meetingminutes = meetingMinutes.objects.all()
     return render(request, 'projectcoop/meetingminutes.html', {'meetingminutes': meetingminutes})
 
+@login_required
 def newMeetingMinutes(request):
     form = meetingMinutesForm
     if request.method=='POST':
@@ -35,3 +37,9 @@ def newMeetingMinutes(request):
 def getCoopDef(request):
     # coopdef = coopdef.objects.all()
     return render(request, 'projectcoopapp/coopdef.html')
+
+def loginmessage(request):
+    return render(request, 'projectcoopapp/loginmessage.html')
+
+def logoutmessage(request):
+    return render(request, 'projectcoopapp/logoutmessage.html')
